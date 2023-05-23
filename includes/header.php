@@ -12,16 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
   
     <!--CSS PROJETO -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
 
    </head>
    <body class="bg-dark text-light">
     
         <div class="container">
             
-            <div class="jumbotron bg-danger p-5">
-                <h1>WDEV Vagas</h1>
+            <div class="jumbotron bg-danger p-5 mt-5">
+                <h1 class="hs">WDEV Vagas</h1>
                 <p>Exemplo de CRUD com PHP Orientados a Objetos</p>
             </div>
-        
- 

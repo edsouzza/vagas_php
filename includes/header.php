@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="css/estilo.css">
 
     <!--JS PROJETO -->
-    <script src="./App/js/funcoes.js" defer></script>
+    <script src="js/funcoes.js" defer></script>
 
    </head>
    <body class="bg-dark text-light">
     
         <div class="container">
             
-            <div class="jumbotron bg-danger p-5 mt-5">
+            <div class="jumbotron bg-danger p-5 mt-2">
                 <h1 class="hs">WDEV Vagas</h1>
                 <p>Exemplo de CRUD com PHP Orientados a Objetos</p>
             </div>

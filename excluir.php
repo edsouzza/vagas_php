@@ -22,8 +22,7 @@ if(!$obVaga instanceof Vaga){
 //VALIDAÇÃO DO POST
 if(isset($_POST['excluir'])){
        
-    $obVaga->excluir();
-    
+    $obVaga->excluir();    
     header('location: index.php?status=success');
     exit;
 

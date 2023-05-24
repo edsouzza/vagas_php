@@ -14,6 +14,9 @@
     <!--CSS PROJETO -->
     <link rel="stylesheet" href="css/estilo.css">
 
+    <!--JS PROJETO -->
+    <script src="./App/js/funcoes.js" defer></script>
+
    </head>
    <body class="bg-dark text-light">
     

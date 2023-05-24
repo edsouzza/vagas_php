@@ -103,4 +103,70 @@ class Database{
 
     }
 
+/**
+ * Metodo responsavel por executar uma consulta no banco
+ * @param string $where
+ * @param string $order
+ * @param string $limit
+ * @param string $fields
+ * @param PDOStatement
+ */
+
+    public function select($where = null, $order = null, $limit = null, $fields = '*'){
+        //DADOS DA QUERY
+        $where = strlen($where) ? 'WHERE '.$where : '';
+        $order = strlen($order) ? 'ORDER BY '.$order : '';
+        $limit = strlen($limit) ? 'LIMIT '.$limit : '';
+
+        //MONTA QUERY
+        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order.' '.$limit;
+
+        //EXECUTA QUERY
+        return $this->execute($query);
+
+    }
+
+/**
+ * Metodo responsavel por atualizar os dados no banco de dados
+ * @param string $where
+ * @param array $values [$fields =>value]
+ * @return boolean
+ */
+
+    public function update($where, $values){
+        //DADOS DA QUERY
+        $fields = array_keys($values);
+        
+        //MONTA A QUERY
+        $query = 'UPDATE '.$this->table.' SET '.implode('=?,',$fields).'=? WHERE '.$where;
+        //echo $query;
+        
+        //EXECUTAR A QUERY
+        $this->execute($query, array_values($values));
+
+        //RETORNA SUCESSO
+        return true;
+   
+    }
+
+/**
+ * Metodo responsavel por deletar a vaga do banco
+ * @param string $where
+ * @return boolean
+ */
+
+    public function delete($where){
+        
+        //MONTA A QUERY
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+        //echo $query;
+        
+        //EXECUTAR A QUERY
+        $this->execute($query);
+
+        //RETORNA SUCESSO
+        return true;
+
+    }
+
 }
